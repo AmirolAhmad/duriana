@@ -1,0 +1,32 @@
+<div class="col-md-6 col-md-offset-3">
+
+	<div ng-controller="PhoneBook">
+		<div class="page-header">
+			<h1>Duriana</h1>
+		</div>
+
+	    <form class="form-inline" role="form" ng-submit="addName()">
+	        <input type="text" ng-model="userName"  size="30" placeholder="Full Name" class="form-control">
+	        <input type="text" ng-model="userPhone"  size="30" placeholder="Phone Number" class="form-control">
+	        <input class="btn btn-primary" type="submit" value="Add">
+	    </form>
+
+	    <hr>
+
+		<table class="table table-bordered">
+		  <thead>
+		  	<tr class="active">
+		  		<th>User</th>
+		  		<th>Phone Number</th>
+		  	</tr>
+		  </thead>
+		  <tbody>
+		  	<tr ng-repeat="user in users">
+		  		<td>{{user.name}}</td>
+		  		<td>{{user.phone}}</td>
+		  	</tr>
+		  </tbody>
+		</table>
+	</div>
+
+</div>
