@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  get 'main/index'
   root 'main#index'
+
+  resources "phones"
+
+  match '/main/index',  to: 'main#index',            via: 'post'
+  match '/',  to: 'main#index',            via: 'post'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
